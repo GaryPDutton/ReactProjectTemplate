@@ -1,0 +1,9 @@
+#app {
+    max-width: 850px;
+    min-height: 850px;
+    margin: auto;
+}
+
+a.active {
+    color: orange;
+}
