@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
 import itemApi from '../api/mockItemApi';
-import {beginAjaxCall} from './ajaxStatusActions';
+import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 
 export function loadItemsSuccess(items){
     return {
@@ -38,6 +38,7 @@ export function saveItem(item){
             item.id ? dispatch(updateItemSuccess(saveItem)) :
             dispatch(createItemSuccess(saveItem));
         }).catch(error => {
+            dispatch(ajaxCallError(error));
             throw(error);
         });
     };

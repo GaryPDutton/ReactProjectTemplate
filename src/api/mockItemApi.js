@@ -8,31 +8,31 @@ const items = [
     id: "computer-components",
     title: "Computer components",
     userId: "gary-dutton",
-    category: "JavaScript"
+    category: "Components"
   },
   {
     id: "a-blue-car",
     title: "A blue car",
     userId: "gary-dutton",
-    category: "Software Practices"
+    category: "Cars"
   },
   {
     id: "a-shaggy-dog",
     title: "A shaggy dog",
     userId: "gary-dutton",
-    category: "Software Architecture"
+    category: "Pets"
   },
   {
     id: "book-of-proverbs",
     title: "Book of proverbs",
     userId: "gary-dutton",
-    category: "Career"
+    category: "Books"
   },
   {
     id: "elvis-statue",
     title: "Elvis statue",
     userId: "gary-dutton",
-    category: "HTML5"
+    category: "Tat"
   }
 ];
 
@@ -72,7 +72,6 @@ class ItemApi {
           //The server would generate ids and watchHref's for new items in a real app.
           //Cloning so copy returned is passed by value rather than by reference.
           item.id = generateId(item);
-          item.watchHref = `http://www.pluralsight.com/items/${item.id}`;
           items.push(item);
         }
 
