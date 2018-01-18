@@ -36,7 +36,7 @@ class UserApi {
   }
 
   static saveUser(user) {
-	user = Object.assign({}, user); // to avoid manipulating object passed in.
+    user = Object.assign({}, user); // to avoid manipulating object passed in.
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         // Simulate server-side validation

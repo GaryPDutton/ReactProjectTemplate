@@ -6,23 +6,23 @@ import ItemList from './ItemList';
 import {browserHistory} from 'react-router';
 
 class ItemsPage extends React.Component {
-    constructor(props, context){
-        super(props, context);
+  constructor(props, context){
+    super(props, context);
 
-        this.redirectToAddItemPage = this.redirectToAddItemPage.bind(this);
-    }
+    this.redirectToAddItemPage = this.redirectToAddItemPage.bind(this);
+  }
 
-    itemRow(item, index){
-        return <div key={index}>{item.title}</div>;
-    }
+  itemRow(item, index){
+    return <div key={index}>{item.title}</div>;
+  }
 
-    redirectToAddItemPage(){
-        browserHistory.push('/item');
-    }
+  redirectToAddItemPage(){
+    browserHistory.push('/item');
+  }
 
-    render(){
-        const {items} = this.props;
-        return(
+  render(){
+    const {items} = this.props;
+    return(
             <div>
                 <h1>Items</h1>
                 <input 
@@ -33,25 +33,25 @@ class ItemsPage extends React.Component {
                 <ItemList items={items} />
             </div>
         );
-    }
+  }
 }
 
 ItemsPage.propTypes = {
-    actions: PropTypes.object.isRequired,
-    items: PropTypes.array.isRequired
+  actions: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state, ownProps){
-    return {
-        items: state.items
-    };
+  return {
+    items: state.items
+  };
 }
 
 function mapDispatchToProps(dispatch)
 {
-    return {
-        actions: bindActionCreators(itemActions,dispatch)
-    };
+  return {
+    actions: bindActionCreators(itemActions,dispatch)
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ItemsPage);

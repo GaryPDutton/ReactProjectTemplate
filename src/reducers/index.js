@@ -4,9 +4,9 @@ import users from './userReducer';
 import ajaxCallsInProgress from './ajaxStatusReducer';
 
 const routeReducer = combineReducers({
-    items,
-    users,
-    ajaxCallsInProgress
+  items,
+  users,
+  ajaxCallsInProgress
 });
 
 export default routeReducer;

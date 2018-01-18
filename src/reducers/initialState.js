@@ -1,5 +1,5 @@
 export default {
-    users: [],
-    items: [],
-    ajaxCallsInProgress: 0
+  users: [],
+  items: [],
+  ajaxCallsInProgress: 0
 };

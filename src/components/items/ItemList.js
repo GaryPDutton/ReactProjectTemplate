@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import ItemListRow from './ItemListRow';
 
 const ItemList = ({items}) => {
-    return (
+  return (
         <table className="table">
             <thead>
                 <tr>
@@ -21,7 +21,7 @@ const ItemList = ({items}) => {
 };
 
 ItemList.propTypes = {
-    items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired
 };
 
 export default ItemList;

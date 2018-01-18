@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
 const ItemList = ({item}) => {
-    return (
+  return (
         <tr>
             <td><Link to={'/item/'+item.id} >{item.title}</Link></td>
             <td>{item.userId}</td>
@@ -13,7 +13,7 @@ const ItemList = ({item}) => {
 };
 
 ItemList.propTypes = {
-    item: PropTypes.object.isRequired
+  item: PropTypes.object.isRequired
 };
 
 export default ItemList;

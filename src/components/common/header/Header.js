@@ -3,7 +3,7 @@ import {Link, IndexLink} from "react-router";
 import LoadingDots from "../LoadingDots";
 
 const Header = ({loading}) => {
-    return (
+  return (
         <nav>
             <IndexLink to="/" activeClassName="active" >Home</IndexLink>
             {' | '}
@@ -16,7 +16,7 @@ const Header = ({loading}) => {
 };
 
 Header.propTypes = {
-    loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired
 };
 
 export default Header;
