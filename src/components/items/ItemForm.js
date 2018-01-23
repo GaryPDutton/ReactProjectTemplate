@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import TextInput from '../common/forms/TextInput';
 import SelectInput from '../common/forms/SelectInput';
+import TextAreaInput from '../common/forms/TextAreaInput';
 
 const ItemForm = ({item, allUsers, onSave, onChange, saving, errors}) => {
   return (
@@ -27,6 +28,14 @@ const ItemForm = ({item, allUsers, onSave, onChange, saving, errors}) => {
         value={item.category}
         onChange={onChange}
         error={errors.category}/>
+
+      <TextAreaInput
+        name="comments"
+        label="Comments"
+        value={item.comments}
+        onChange={onChange}
+        rows={6}
+        error={errors.comments}/>
 
       <input
         type="submit"

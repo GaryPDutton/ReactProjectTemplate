@@ -7,11 +7,11 @@ import ItemsPage from './components/items/ItemsPage';
 import ManageItemPage from './components/items/ManageItemPage';
 
 export default (
-    <Route path="/" component={App}>
-        <IndexRoute component={HomePage}/>
-        <Route path="/items" component={ItemsPage}/>
-        <Route path="/item" component={ManageItemPage}/>
-        <Route path="/item/:id" component={ManageItemPage}/>
-        <Route path="/about" component={AboutPage}/>
-    </Route>
+  <Route path="/" component={App}>
+    <IndexRoute component={HomePage}/>
+    <Route path="/items" component={ItemsPage}/>
+    <Route path="/item" component={ManageItemPage}/>
+    <Route path="/item/:id" component={ManageItemPage}/>
+    <Route path="/about" component={AboutPage}/>
+  </Route>
 );

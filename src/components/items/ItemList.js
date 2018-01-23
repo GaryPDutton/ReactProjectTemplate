@@ -3,21 +3,22 @@ import ItemListRow from './ItemListRow';
 
 const ItemList = ({items}) => {
   return (
-        <table className="table">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>User </th>
-                    <th>Category</th>
-                </tr>
-            </thead>
-            <tbody>
-                {items.map(item => 
-                    <ItemListRow key={item.id} item={item} />
-                )}
-            </tbody>
-        </table>
-    );
+    <table className="table">
+      <thead>
+      <tr>
+        <th>Title</th>
+        <th>User</th>
+        <th>Category</th>
+        <th>Comments</th>
+      </tr>
+      </thead>
+      <tbody>
+      {items.map(item =>
+        <ItemListRow key={item.id} item={item}/>
+      )}
+      </tbody>
+    </table>
+  );
 };
 
 ItemList.propTypes = {

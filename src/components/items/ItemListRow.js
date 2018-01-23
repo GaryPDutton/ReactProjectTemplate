@@ -3,13 +3,13 @@ import {Link} from 'react-router';
 
 const ItemList = ({item}) => {
   return (
-        <tr>
-            <td><Link to={'/item/'+item.id} >{item.title}</Link></td>
-            <td>{item.userId}</td>
-            <td>{item.category}</td>
-            <td>{item.length}</td>
-         </tr>
-    );
+    <tr>
+      <td><Link to={'/item/' + item.id}>{item.title}</Link></td>
+      <td>{item.userId}</td>
+      <td>{item.category}</td>
+      <td>{item.comments}</td>
+    </tr>
+  );
 };
 
 ItemList.propTypes = {

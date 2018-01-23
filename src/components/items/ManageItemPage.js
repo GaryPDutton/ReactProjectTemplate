@@ -22,7 +22,7 @@ export class ManageItemPage extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.item.id != nextProps.item.id) {
-            // Necessary to populate form when existing item is loaded directly.
+      // Necessary to populate form when existing item is loaded directly.
       this.setState({item: Object.assign({}, nextProps.item)});
     }
   }
@@ -56,11 +56,11 @@ export class ManageItemPage extends React.Component {
 
     this.setState({saving: true});
     this.props.actions.saveItem(this.state.item)
-            .then(() => this.redirect())
-            .catch(error => {
-              toastr.error(error);
-              this.setState({saving: false});
-            });
+      .then(() => this.redirect())
+      .catch(error => {
+        toastr.error(error);
+        this.setState({saving: false});
+      });
   }
 
   redirect() {
@@ -71,15 +71,15 @@ export class ManageItemPage extends React.Component {
 
   render() {
     return (
-            <ItemForm
-                item={this.state.item}
-                onChange={this.updateItemState}
-                onSave={this.saveItem}
-                errors={this.state.errors}
-                allUsers={this.props.users}
-                saving={this.state.saving}
-            />
-        );
+      <ItemForm
+        item={this.state.item}
+        onChange={this.updateItemState}
+        onSave={this.saveItem}
+        errors={this.state.errors}
+        allUsers={this.props.users}
+        saving={this.state.saving}
+      />
+    );
   }
 }
 
@@ -103,7 +103,7 @@ function getItemById(items, id) {
 function mapStateToProps(state, ownProps) {
   const itemId = ownProps.params.id; // from the path `/item/:id`
 
-  let item = {id: '', title: '', userId: '', category: ''};
+  let item = {id: '', title: '', userId: '', category: '', comments: ''};
 
   if (itemId && state.items.length > 0) {
     item = getItemById(state.items, itemId);
