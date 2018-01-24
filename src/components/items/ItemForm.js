@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import TextInput from '../common/forms/TextInput';
 import SelectInput from '../common/forms/SelectInput';
 import TextAreaInput from '../common/forms/TextAreaInput';
+import RadioInput from '../common/forms/RadioInput';
 
 const ItemForm = ({item, allUsers, onSave, onChange, saving, errors}) => {
   return (
@@ -36,6 +37,14 @@ const ItemForm = ({item, allUsers, onSave, onChange, saving, errors}) => {
         onChange={onChange}
         rows={6}
         error={errors.comments}/>
+
+      <RadioInput
+        name="inStock"
+        label="In stock"
+        value={item.inStock}
+        onChange={onChange}
+        options={['Yes', 'No']}
+        error={errors.inStock}/>
 
       <input
         type="submit"

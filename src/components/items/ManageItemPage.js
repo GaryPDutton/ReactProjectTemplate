@@ -28,7 +28,8 @@ export class ManageItemPage extends React.Component {
   }
 
   updateItemState(event) {
-    const field = event.target.name;
+    debugger;
+    const field = event.target.name.split('_option_')[0];
     let item = Object.assign({}, this.state.item);
     item[field] = event.target.value;
     return this.setState({item: item});
@@ -103,7 +104,7 @@ function getItemById(items, id) {
 function mapStateToProps(state, ownProps) {
   const itemId = ownProps.params.id; // from the path `/item/:id`
 
-  let item = {id: '', title: '', userId: '', category: '', comments: ''};
+  let item = {id: '', title: '', userId: '', category: '', comments: '', inStock:''};
 
   if (itemId && state.items.length > 0) {
     item = getItemById(state.items, itemId);

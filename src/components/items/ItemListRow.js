@@ -8,6 +8,7 @@ const ItemList = ({item}) => {
       <td>{item.userId}</td>
       <td>{item.category}</td>
       <td>{item.comments}</td>
+      <td>{item.inStock}</td>
     </tr>
   );
 };

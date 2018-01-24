@@ -10,6 +10,7 @@ const ItemList = ({items}) => {
         <th>User</th>
         <th>Category</th>
         <th>Comments</th>
+        <th>In stock</th>
       </tr>
       </thead>
       <tbody>

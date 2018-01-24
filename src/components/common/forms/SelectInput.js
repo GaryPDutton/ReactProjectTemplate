@@ -1,8 +1,13 @@
 import React, {PropTypes} from 'react';
 
 const SelectInput = ({name, label, onChange, defaultOption, value, error, options}) => {
+  let wrapperClass = 'form-group';
+  if (error && error.length > 0) {
+    wrapperClass += " " + 'has-error';
+  }
+
   return (
-    <div className="form-group">
+    <div className={wrapperClass}>
       <label htmlFor={name}>{label}</label>
       <div className="field">
         {/* Note, value is set here rather than on the option - docs: https://facebook.github.io/react/docs/forms.html */}
